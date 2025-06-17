@@ -12,7 +12,7 @@ public class Card {
 		this.suitMark=suitMark;
 		this.no=no;
 	}
-	//メソッド（今回はゲッタンのみ）
+	//メソッド（今回はゲッタのみ）を保存。
 	
 	public String getSuitMark() {//絵柄のゲッタ
 		return suitMark;
@@ -29,5 +29,5 @@ public class Card {
 		 return suitMark+no;
 		 //別解答：return this.suitMark+this.no;
 	}
-
+//
 }

@@ -22,5 +22,6 @@ public class Tester {
 		//toString()を呼び出して画面表示
 		System.out.println(ca.toString());//返却値を画面表示
 	}
+	
 
 }
