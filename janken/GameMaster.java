@@ -1,12 +1,11 @@
-// 演習14-3設問1 じゃんけんゲーム進行クラス（完成版）
-// 演習14-3設問2 じゃんけんゲーム進行クラス（作成用）
+
 package janken;
 
 import java.util.Scanner;
 
 public class GameMaster {
 	
-	/* 繰返しの継続を判定するメソッド */
+	//繰返しの継続を判定するメソッド 
 	static boolean confirmRetry() {
 		Scanner stdIn = new Scanner(System.in);
 		int retry = 1;

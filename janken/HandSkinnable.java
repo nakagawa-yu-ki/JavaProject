@@ -1,4 +1,4 @@
-// 演習14-3設問2 じゃんけんの手インタフェース（演習14-3設問1と同じ）（本問で変更なし）
+
 package janken;
 
 public interface HandSkinnable {

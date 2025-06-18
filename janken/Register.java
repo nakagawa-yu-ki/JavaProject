@@ -1,4 +1,4 @@
-// 演習14-3設問2 じゃんけん記録クラス（演習13-3設問2と同じ）（本問で変更なし）
+//最終結果を表示したい。
 package janken;
 
 public class Register {

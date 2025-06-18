@@ -1,3 +1,4 @@
+//インターフェース
 package janken;
 
 public interface Strategy {

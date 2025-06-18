@@ -1,4 +1,4 @@
-// 演習14-3設問2 じゃんけんルールクラス（演習13-3設問2と同じ）（本問で変更なし）
+
 package janken;
 
 public class JankenRule implements HandSkinnable {
