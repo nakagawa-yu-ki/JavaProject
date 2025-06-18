@@ -1,5 +1,5 @@
 //最終結果を表示したい。
-package janken;
+package pokemonbattle;
 
 public class Register {
 	
@@ -7,7 +7,7 @@ public class Register {
 	
 	public Register() {	}	// コンストラクタ
 	
-	/* 	じゃんけんの勝敗を記録するメソッド */
+	/* 	ポゲモンバトルの勝敗を記録するメソッド */
 	public void recordJudge(int judge) {
 		result[judge]++;
 	}

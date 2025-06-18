@@ -1,7 +1,7 @@
 //インターフェース
-package janken;
+package pokemonbattle;
 
 public interface Strategy {
 
-	int nextHand(int lastHand);
+	int nextPokemon(int lastPokemon);
 }

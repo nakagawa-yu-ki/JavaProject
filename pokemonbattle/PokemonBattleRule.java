@@ -1,13 +1,13 @@
 
-package janken;
+package pokemonbattle;
 
-public class JankenRule implements HandSkinnable {
+public class PokemonBattleRule implements PokemonSkinnable {
 	
-	static String[] handStr;	// じゃんけんの手文字列配列
+	static String[] pokemonbattle;	
 	
-	/* 国によって手の呼び名を変える */
-	static void changeCountry(int country) {
-		handStr = handStrs[country];
+	/* 地方にによってポケモンの呼び名を変える */
+	static void changeRegion(int region) {
+		pokemonbattle = pokemonStrs[region];
 	}
 	
 	/* じゃんけんの勝敗を判定するメソッド */

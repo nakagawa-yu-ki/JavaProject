@@ -1,11 +1,11 @@
 
 // プレイヤーの情報を保存、返したい
-package janken;
+package pokemonbattle;
 
 public  class Player {
 
 	private String name;	// 名前
-	private int hand;		// じゃんけんの手
+	private int pokemon;		// ポゲモン
 	private Strategy strategy=null;   //戦略
 	
 	// コンストラクタ
@@ -19,8 +19,8 @@ public  class Player {
 		return name;
 	}
 	
-	public int getHand() {
-		return hand;
+	public int getPokemon() {
+		return pokemon;
 	}
 
 	// セッタ
@@ -28,19 +28,19 @@ public  class Player {
 		this.name = name;
 	}
 	
-	public void setHand(int hand) {
-		this.hand = hand;
+	public void setPokemon(int pokemon) {
+		this.pokemon = pokemon;
 	}
 	
 	/* 次の手を生成するメソッド */
-	public void nextHand() {
-		int hand=strategy.nextHand(this.hand);//次の手を考える
-		setHand(hand);//手を保存
+	public void nextPokemon() {
+		int pokemon=strategy.nextPokemon(this.pokemon);//次の手を考える
+		setPokemon(pokemon);//手を保存
 	}
 
 	/* じゃんけんの手を表示するメソッド */
-	public void showHand() {
-		System.out.println(toString() + JankenRule.handStr[hand]);
+	public void showPokemon() {
+		System.out.println(toString() + PokemonBattleRule.pokemonbattle[pokemon]);
 	}
 	
 	/* 文字列表現を返却するメソッド */
