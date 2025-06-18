@@ -17,7 +17,7 @@ public class Tester {
 		
 		//入力した絵柄と数字によりCardクラスのインスタンス生成
 		Card ca=new Card(suitMark,no);//クラスインスタンスの生成
-		System.out.println("カードを表示します。");
+		System.out.println("あなたの入力したカードを表示します。");
 		
 		//toString()を呼び出して画面表示
 		System.out.println(ca.toString());//返却値を画面表示
