@@ -35,8 +35,8 @@ public class GameMaster {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 		
-		System.out.println("じゃんけんの手の国別を選択してください");
-		System.out.print("（日本：0、中国：1、アメリカ：2）");
+		System.out.println("ここから3匹のポゲモンを選ぶのじゃ");
+		System.out.print("（不思議だね：0、人影：1、銭亀：2）");
 		int cSelect = stdIn.nextInt();
 		switch (cSelect) {
 		/*changeCoutryはJankenRuleクラスから引っ張ってくる*/ 
