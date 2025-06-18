@@ -14,7 +14,6 @@ public class HumanStrategy implements Strategy {
 			hand = stdIn.nextInt();
 		} while (hand < 0 || hand > 2);
 		return hand;
-		//
 	}
 	}
 

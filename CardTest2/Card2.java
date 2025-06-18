@@ -12,7 +12,7 @@ public class Card2 {
 		this.suitMark=suitMark;
 		this.no=no;
 	}
-	//メソッド（今回はゲッタンのみ）
+	//メソッド（今回はゲッタのみ）。セッタは書かなくても行ける
 	
 	public String getsuitMark() {//絵柄のゲッタ
 		return suitMark;
