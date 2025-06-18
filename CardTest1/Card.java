@@ -14,7 +14,7 @@ public class Card {
 	}
 	//メソッド（今回はゲッタのみ）を保存。
 	
-	public String getSuitMark() {//絵柄のゲッタ
+	public String getSuitMark() {//絵柄のゲッタん
 		return suitMark;
 		//別解答：return this.suitMark;
 	}
