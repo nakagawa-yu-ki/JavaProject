@@ -19,7 +19,7 @@ public class Card {
 		//別解答：return this.suitMark;
 	}
 	
-	public int getNo() {	//数字のゲッタ
+	public int getNo() {	//数字のゲッタん
 		return no;
 		//別解答：return this.no;
 	}
