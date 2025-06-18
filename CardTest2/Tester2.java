@@ -41,7 +41,7 @@ public class Tester2 {
 		System.out.println("♣"+dcard.toString());
 		System.out.println("♦"+ecard.toString());
 		
-		//なんでbcardだけ呼び出せて、他4つがうまく呼び出せないかわからない・・
+		
 	}
 
 }
