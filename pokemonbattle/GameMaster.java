@@ -22,18 +22,37 @@ public class GameMaster {
 	
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
+		int BattleSelect = -1;
 		
-		
-		System.out.println("ここから好きな地方を選んでね");
-		System.out.print("（カントー：0、ジョウト：1、ホウエン：2）");
-		int BattleSelect = stdIn.nextInt();
-		switch (BattleSelect) {
-		
-		case 0: PokemonBattleRule.changeRegion(PokemonSkinnable.SELECT_KANTO);break;
-		 case 1: PokemonBattleRule.changeRegion(PokemonSkinnable.SELECT_JOUTO);break;
-		 case 2: PokemonBattleRule.changeRegion(PokemonSkinnable.SELECT_HOUEN);break;
-		 //breakがないとHOUEN表記にしかならないので、1個1個つけるために必要
+		while(true) {
+			System.out.println("ここから好きな地方を選んでね");
+			System.out.print("（カントー：0、ジョウト：1、ホウエン：2）");
+			
+			if(stdIn.hasNextInt()) {
+				BattleSelect = stdIn.nextInt();
+				
+				switch (BattleSelect) {
+				
+				case 0: PokemonBattleRule.changeRegion(PokemonSkinnable.SELECT_KANTO);
+				break;
+				 case 1: PokemonBattleRule.changeRegion(PokemonSkinnable.SELECT_JOUTO);
+				 break;
+				 case 2: PokemonBattleRule.changeRegion(PokemonSkinnable.SELECT_HOUEN);
+				 break;
+				 //breakがないとHOUEN表記にしかならないので、1個1個つけるために必要
+				 default:
+					 System.out.println("無効な番号です。入力しなおしてください");
+			}
+		}else {
+			System.out.println("数値を入力してください");
+			stdIn.nextInt();
 		}
+		
+		
+		
+		
+		
+		
 		
 		Player[] p = new Player[2];	// Player型配列の生成
 		
