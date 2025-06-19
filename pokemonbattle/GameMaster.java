@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 public class GameMaster {
 	
-	static Player makePlayer(String playerNo) {
-		Scanner stdIn = new Scanner(System.in);
+	static Player makePlayer(String playerNo, Scanner stdIn) {
+		
 	
 		System.out.print("（主人公：0、ライバル（男）：1、ライバル（女）：2）");
 		int playerKind = stdIn.nextInt();
@@ -50,6 +50,7 @@ public class GameMaster {
 			System.out.println("数値を入力してください");
 			stdIn.nextLine();
 		}
+		}
 		
 		
 		Player[] p = new Player[2];	// Player型配列の生成
@@ -57,7 +58,7 @@ public class GameMaster {
 		System.out.println("プレーヤを選択してください");
 		for (int i = 0; i < p.length; i++) {
 			System.out.println("プレーヤー" + (i + 1));
-			p[i] = makePlayer("プレーヤー" + (i + 1));
+			p[i] = makePlayer("プレーヤー" + (i + 1),stdIn);
 		}
 
 		Register reg = new Register();	// Registerクラスのインスタンス生成
@@ -75,14 +76,14 @@ public class GameMaster {
 			
 			reg.recordJudge(judge);	// 勝敗を記録
 			
-		} while (confirmRetry());	// ゲーム継続判定
+		} while (confirmRetry(stdIn));	// ゲーム継続判定
 
 		reg.printMatch(); // 勝敗記録の表示
 	}
-	}
+	
 	//繰返しの継続を判定するメソッド 
-	static boolean confirmRetry() {
-		Scanner stdIn = new Scanner(System.in);
+	static boolean confirmRetry(Scanner stdIn) {
+		
 		int retry = 1;
 		do {
 			System.out.print(" 続けますか？（1:はい、0:いいえ）");
