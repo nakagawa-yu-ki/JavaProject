@@ -8,13 +8,14 @@ public class GameMaster {
 	static Player makePlayer(String playerNo, Scanner stdIn) {
 		
 	
-		System.out.print("（主人公：0、ライバル（男）：1、ライバル（女）：2）");
+		System.out.print("主人公(男）:0、主人公(女)：1、ライバル（男）：2、ライバル（女）：3");
 		int playerKind = stdIn.nextInt();
 		Player player = switch (playerKind) {
-		 case 0 -> new Player(playerNo + "（主人公）",new HumanStrategy());
-		 case 1 -> new Player(playerNo + "（ライバル（男））",new ComputerStrategyRandom());
-		 case 2 -> new Player(playerNo + "（ライバル（女））",new ComputerStrategySerial());
-		 default -> new Player("KYプレイヤー",new HumanStrategy());
+		 case 0 -> new Player(playerNo + "レッド",new HumanStrategy());
+		 case 1 -> new Player(playerNo + "ブルー",new HumanStrategy());
+		 case 2 -> new Player(playerNo + "グリーン",new ComputerStrategyRandom());
+		 case 3 -> new Player(playerNo + "イエロー",new ComputerStrategySerial());
+		 default -> new Player("ジョン・ドゥ",new HumanStrategy());
 		};
 		return player;
 	}
