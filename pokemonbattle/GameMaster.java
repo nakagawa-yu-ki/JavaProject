@@ -42,16 +42,13 @@ public class GameMaster {
 				 //breakがないとHOUEN表記にしかならないので、1個1個つけるために必要
 				 default:
 					 System.out.println("無効な番号です。入力しなおしてください");
+					 continue;
 			}
+				break;
 		}else {
 			System.out.println("数値を入力してください");
-			stdIn.nextInt();
+			stdIn.next();
 		}
-		
-		
-		
-		
-		
 		
 		
 		Player[] p = new Player[2];	// Player型配列の生成
@@ -80,6 +77,7 @@ public class GameMaster {
 		} while (confirmRetry());	// ゲーム継続判定
 
 		reg.printMatch(); // 勝敗記録の表示
+	}
 	}
 	//繰返しの継続を判定するメソッド 
 	static boolean confirmRetry() {
