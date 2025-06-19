@@ -30,6 +30,7 @@ public class GameMaster {
 			
 			if(stdIn.hasNextInt()) {
 				BattleSelect = stdIn.nextInt();
+				stdIn.nextLine();
 				
 				switch (BattleSelect) {
 				
@@ -47,7 +48,7 @@ public class GameMaster {
 				break;
 		}else {
 			System.out.println("数値を入力してください");
-			stdIn.next();
+			stdIn.nextLine();
 		}
 		
 		
@@ -85,7 +86,11 @@ public class GameMaster {
 		int retry = 1;
 		do {
 			System.out.print(" 続けますか？（1:はい、0:いいえ）");
-			retry = stdIn.nextInt();
+			if(stdIn.hasNextInt()) {
+				retry = stdIn.nextInt();
+				stdIn.nextLine();
+			}
+			
 		} while (retry != 1 && retry != 0);
 		return (retry == 1);
 	}
