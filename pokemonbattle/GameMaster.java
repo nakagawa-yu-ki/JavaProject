@@ -37,7 +37,7 @@ public class GameMaster {
 			
 			};
 			
-		//プレイヤーを
+		//プレイヤーを選択する
 		strategy = switch (playerKind) {
 		 //case 0 -> new Player(playerNo + "レッド",new HumanStrategy());
 		 //case 1 -> new Player(playerNo + "ブルー",new HumanStrategy());
@@ -57,7 +57,7 @@ public class GameMaster {
 		
 		while(true) {
 			System.out.println("ここから好きな地方を選んでね");
-			System.out.print("（カントー：0、ジョウト：1、ホウエン：2）");
+			System.out.print("（カントー：0、ジョウト：1、ホウエン：2、シンオウ：3）");
 			
 			if(stdIn.hasNextInt()) {
 				BattleSelect = stdIn.nextInt();
@@ -70,6 +70,8 @@ public class GameMaster {
 				 case 1: PokemonBattleRule.changeRegion(PokemonSkinnable.SELECT_JOUTO);
 				 break;
 				 case 2: PokemonBattleRule.changeRegion(PokemonSkinnable.SELECT_HOUEN);
+				 break;
+				 case 3: PokemonBattleRule.changeRegion(PokemonSkinnable.SELECT_SINOU);
 				 break;
 				 //breakがないとHOUEN表記にしかならないので、1個1個つけるために必要
 				 default:
