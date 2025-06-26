@@ -10,6 +10,31 @@ public class GameMaster {
 	
 		System.out.print("主人公(男）:0、主人公(女)：1、ライバル（男）：2、ライバル（女）：3");
 		int playerKind = stdIn.nextInt();
+		
+		String name;
+		if(playerKind==0|| playerKind==1) {
+			while(true) {
+				System.out.println("あなたの名前を入力してください：");
+				name=stdIn.next();
+				
+				System.out.println("この名前でよろしいですね？（はい/いいえ）：");
+				String confirm=stdIn.next();
+				
+				if(confirm.equals("はい") || confirm.equalsIgnoreCase("yes")) {
+					break;
+				}else {
+					System.out.println("もう一度入力してください");
+				}
+			}
+		}else {
+			name=switch(playerKind) {
+			case 2 ->playerNo + "グリーン";
+			case 3 ->playerNo + "イエロー";
+			default -> "ジョン・ドゥ";
+			
+			};
+			
+		//プレイヤーを
 		Player player = switch (playerKind) {
 		 case 0 -> new Player(playerNo + "レッド",new HumanStrategy());
 		 case 1 -> new Player(playerNo + "ブルー",new HumanStrategy());
@@ -18,6 +43,7 @@ public class GameMaster {
 		 default -> new Player("ジョン・ドゥ",new HumanStrategy());
 		};
 		return player;
+	}
 	}
 
 	
