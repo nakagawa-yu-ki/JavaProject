@@ -1,8 +1,9 @@
 package pokemonbattle;
+
 import java.util.Scanner;
 
 public class HumanStrategy implements Strategy {
-	
+
 	@Override
 	public int nextPokemon(int pokemon) {
 		Scanner stdIn = new Scanner(System.in);
@@ -15,6 +16,4 @@ public class HumanStrategy implements Strategy {
 		} while (pokemon < 0 || pokemon > 2);
 		return pokemon;
 	}
-	}
-
-
+}
