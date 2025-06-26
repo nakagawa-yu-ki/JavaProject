@@ -12,6 +12,8 @@ public class GameMaster {
 		int playerKind = stdIn.nextInt();
 		
 		String name;
+		Strategy strategy;
+		
 		if(playerKind==0|| playerKind==1) {
 			while(true) {
 				System.out.println("あなたの名前を入力してください：");
@@ -26,6 +28,7 @@ public class GameMaster {
 					System.out.println("もう一度入力してください");
 				}
 			}
+			strategy=new HumanStrategy();
 		}else {
 			name=switch(playerKind) {
 			case 2 ->playerNo + "グリーン";
@@ -35,15 +38,16 @@ public class GameMaster {
 			};
 			
 		//プレイヤーを
-		Player player = switch (playerKind) {
-		 case 0 -> new Player(playerNo + "レッド",new HumanStrategy());
-		 case 1 -> new Player(playerNo + "ブルー",new HumanStrategy());
-		 case 2 -> new Player(playerNo + "グリーン",new ComputerStrategyRandom());
-		 case 3 -> new Player(playerNo + "イエロー",new ComputerStrategySerial());
-		 default -> new Player("ジョン・ドゥ",new HumanStrategy());
+		strategy = switch (playerKind) {
+		 //case 0 -> new Player(playerNo + "レッド",new HumanStrategy());
+		 //case 1 -> new Player(playerNo + "ブルー",new HumanStrategy());
+		 case 2 -> new ComputerStrategyRandom();
+		 case 3 -> new ComputerStrategySerial();
+		 default ->new HumanStrategy();
 		};
-		return player;
+		return  new Player(name,strategy);
 	}
+		return null;
 	}
 
 	
