@@ -45,10 +45,10 @@ public class GameMaster {
 		 case 3 -> new ComputerStrategySerial();
 		 default ->new HumanStrategy();
 		};
+		}
 		return  new Player(name,strategy);
 	}
-		return null;
-	}
+	
 
 	
 	public static void main(String[] args) {
