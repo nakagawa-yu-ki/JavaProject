@@ -92,7 +92,7 @@ public class GameMaster {
 			p[i] = makePlayer("プレーヤー" + (i + 1), stdIn);
 		}
 
-		Register reg = new Register(); // Registerクラスのインスタンス生成
+		Register reg = new Register(p[0].getName()); // Registerクラスのインスタンス生成
 
 		do {
 

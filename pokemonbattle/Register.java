@@ -4,8 +4,11 @@ package pokemonbattle;
 public class Register {
 	
 	int[] result = { 0, 0, 0 }; // 勝敗記録配列
+	String playerName;
 	
-	public Register() {	}	// コンストラクタ
+	public Register(String name) {
+		this.playerName=name;
+	}	// コンストラクタ
 	
 	/* 	ポゲモンバトルの勝敗を記録するメソッド */
 	public void recordJudge(int judge) {
@@ -14,7 +17,7 @@ public class Register {
 	
 	/* じゃんけんの勝敗記録を表示するメソッド */
 	public void printMatch() {
-		System.out.println("【総合勝敗表（プレーヤ１の）】");
+		System.out.println("【"+playerName+"の総合勝敗表】");
 		System.out.println("引分 負け 勝ち");
 		for (int i = 0; i < 3; i++)
 			System.out.printf("%4d", result[i]);
